@@ -83,7 +83,11 @@ python app/app.py
 4. Use "Clear Canvas" to erase and draw a new digit
 
 ## Demo
-[Watch Demo Video](https://github.com/saidibnerradi603/handwritten-digit-recognition-cnn/blob/master/images/demo.mp4?raw=true)
+
+<video controls width="600">
+  <source src="https://github.com/saidibnerradi603/handwritten-digit-recognition-cnn/blob/master/images/demo.mp4)" type="video/mp4">
+</video>
+
 
 ## Model Performance
 - Training accuracy: 99.2%
