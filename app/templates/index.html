@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Vision | Handwriting Recognition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Neural Network Background Animation -->
+    <div class="neural-bg"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Neural<span>Vision</span></h1>
+            </div>
+            <div class="model-status">
+                <div class="status-indicator"></div>
+                <span>Model Status: Active</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Drawing Section -->
+            <section class="drawing-section">
+                <div class="canvas-container">
+                    <canvas id="drawingCanvas"></canvas>
+                    <div class="canvas-overlay">
+                        <div class="grid-lines"></div>
+                        <div class="corner-markers">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-controls">
+                    <button class="control-btn clear-btn">
+                        <span class="btn-icon">⟲</span>
+                        Clear Canvas
+                    </button>
+                    <button class="control-btn predict-btn">
+                        <span class="btn-icon">▶</span>
+                        Predict
+                    </button>
+                </div>
+            </section>
+
+            <!-- Prediction Section -->
+            <section class="prediction-section">
+                <div class="prediction-display">
+                    <div class="prediction-result">
+                        <h2>Prediction</h2>
+                        <div class="digit-display">
+                            <span class="digit">-</span>
+                            <div class="confidence-bar">
+                                <div class="confidence-fill"></div>
+                            </div>
+                            <span class="confidence-text">Confidence: --.--%</span>
+                        </div>
+                    </div>
+                    <div class="probability-distribution">
+                        <h3>Probability Distribution</h3>
+                        <div class="distribution-bars">
+                            <!-- Distribution bars will be added dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <div class="model-insights">
+                    <h3>Model Insights</h3>
+                    <div class="insight-metrics">
+                        <div class="metric">
+                            <span class="metric-label">Processing Time</span>
+                            <span class="metric-value">0ms</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Model Confidence</span>
+                            <span class="metric-value">--%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Alternative Predictions</span>
+                            <div class="alt-predictions"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <div class="info-card">
+                <h3>About the Model</h3>
+                <p>This CNN model was trained on the MNIST dataset, achieving 99.2% accuracy. It uses convolutional layers to recognize handwritten digits with high precision.</p>
+            </div>
+            <div class="info-card">
+                <h3>How to Use</h3>
+                <ol>
+                    <li>Draw a single digit (0-9) in the canvas</li>
+                    <li>Click "Predict" to see the neural network in action</li>
+                    <li>View the probability distribution and insights</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p class="creator">Created with 💻 by <span class="name">Said IBNERRADI & ELAAOUAM Mohamed</span></p>
+                <p class="project-info">Deep Learning Project | MNIST Digit Recognition</p>
+            </div>
+           
+        </div>
+       
+    </footer>
+
+    <!-- Neural Processing Animation -->
+    <div class="processing-overlay">
+        <div class="neural-processing">
+            <div class="processing-animation"></div>
+            <span>Processing...</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
