@@ -42,9 +42,14 @@ The project uses a Convolutional Neural Network with the following architecture:
   - Real-time predictions
   - Probability distribution visualization
 ## Dependencies
-- Python 3.x
-- PyTorch 
-- Flask 
+- Flask==2.2.5
+- matplotlib==3.8.0
+- numpy==2.2.1
+- Pillow==11.1.0
+- scikit_learn==1.2.2
+- seaborn==0.13.2
+- torch==2.3.0
+- torchvision==0.18.0
 
 ## Features
 - Draw a single digit on an interactive canvas
@@ -84,9 +89,9 @@ python app/app.py
 
 ## Demo
 
-<video controls width="600">
-  <source src="https://github.com/saidibnerradi603/handwritten-digit-recognition-cnn/blob/master/images/demo.mp4)" type="video/mp4">
-</video>
+
+
+https://github.com/user-attachments/assets/0e88fd6f-42b9-496d-b70b-bce5fd66a9b5
 
 
 ## Model Performance
